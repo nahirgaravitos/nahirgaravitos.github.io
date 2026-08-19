@@ -405,6 +405,41 @@
     footer .wrap{flex-direction:column}
   }
 
+
+  /* ===== V6: contenido siempre visible sin JavaScript ===== */
+  .map-inter{display:none}
+  body.js-wide .map-inter{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:30px;align-items:start}
+  body.js-wide .map-list{display:none}
+  .map-list{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+  .map-group h4{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#89C4E4;margin-bottom:12px;font-weight:700}
+  details.det{border:1px solid var(--line);border-radius:14px;background:#fff;margin-bottom:10px;overflow:hidden}
+  details.det summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 16px;font-weight:600;font-size:14px;color:#35414C;line-height:1.35}
+  details.det summary::-webkit-details-marker{display:none}
+  details.det summary::before{content:"";width:10px;height:10px;border-radius:50%;flex:none;background:var(--navy)}
+  details.det summary::after{content:"+";margin-left:auto;font-family:var(--ff-mono);font-weight:700;color:#8A95A0;font-size:16px;flex:none}
+  details.det[open] summary::after{content:"–";color:var(--navy)}
+  details.det[open] summary{color:var(--navy-2)}
+  details.det.persona summary::before{background:var(--wine)}
+  details.det.plataforma summary::before{background:var(--sky)}
+  .g-tec details.det summary::before{background:var(--navy)}
+  .g-pro details.det summary::before{background:var(--wine)}
+  .g-sua details.det summary::before{background:var(--emerald)}
+  .det-body{padding:2px 16px 16px 36px}
+  .det-body p{font-size:14px;line-height:1.55;color:#404C56}
+  .det-body .aplique,.det-body .amplio{font-family:var(--ff-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  .det-body .aplique{color:var(--wine);margin:8px 0 9px}
+  .det-body ul{list-style:none;display:grid;gap:9px}
+  .det-body li{font-size:13.5px;line-height:1.5;color:#404C56;padding-left:18px;position:relative}
+  .det-body li::before{content:"→";position:absolute;left:0;color:var(--wine);font-weight:700}
+  .det-body .amplio{color:var(--emerald);margin:14px 0 6px;padding-top:12px;border-top:1px dashed #E0E4E8;display:block}
+  .det-body .transfer{font-size:13.5px;color:#56616B}
+  .det-body .mp-skills{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .det-body .mp-skills span{font-size:11.5px;font-weight:600;color:var(--navy);background:#F1F5F7;border:1px solid #E0E7EB;border-radius:999px;padding:4px 10px}
+  .hab-static{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+  @media (max-width:940px){
+    .hab-static,.map-list{grid-template-columns:1fr}
+  }
+
 </style>
 </head>
 <body>
@@ -512,19 +547,18 @@
     <div class="sec-head">
       <p class="eyebrow">02 · El mapa</p>
       <h2>Un sistema completo, una persona en el punto de encuentro</h2>
-      <p>Cada actor hablaba su propio idioma: el jurídico, el técnico, el contable, el de cada cliente. Yo estaba en el medio para que la información cruzara entre todos sin perderse. Toca cada nodo para ver ese frente de trabajo y las habilidades que ponía en juego.</p>
+      <p>Cada actor hablaba su propio idioma: el jurídico, el técnico, el contable, el de cada cliente. Yo estaba en el medio para que la información cruzara entre todos sin perderse. Abre cada frente para ver qué hacía ahí y las habilidades que ponía en juego.</p>
     </div>
     <div class="map-legend">
       <span class="leg-p"><i></i>Personas y roles</span>
       <span class="leg-s"><i></i>Plataformas y sistemas</span>
     </div>
-    <div class="map-flex">
+    <div class="map-inter">
       <div>
         <div class="map-stage" id="stage">
           <svg id="svglines" aria-hidden="true"></svg>
           <button class="nodo-centro" id="centro" aria-pressed="true">Yo<small>punto de encuentro</small></button>
         </div>
-        <div class="map-chips" id="chips"></div>
       </div>
       <aside class="map-panel" id="panel" aria-live="polite">
         <p class="tipo" id="p-tipo">El sistema</p>
@@ -535,6 +569,26 @@
         </div>
       </aside>
     </div>
+    <div class="map-list">
+      <div class="map-group">
+        <h4>Personas y roles</h4>
+        <details class="det persona"><summary>Gerencia General</summary><div class="det-body"><p>Llegaba a la mesa con los datos ya estructurados: qué está pasando, por qué, y qué implica decidir en una dirección u otra. Convertía el detalle operativo en escenarios de decisión, anticipando el efecto de cada cambio sobre el resto del proceso.</p><div class="mp-skills"><span>Análisis para decisiones</span><span>Indicadores (KPIs)</span><span>Detección de patrones</span><span>Comunicación ejecutiva</span></div></div></details>
+        <details class="det persona"><summary>Clientes AFC y AFP</summary><div class="det-body"><p>Frente al cliente operaba como contraparte técnica: recibía el requerimiento, entendía la regla de negocio detrás, y devolvía la información en el formato y protocolo exacto que cada administradora exigía. Cuando dos fuentes no coincidían, reconstruía el proceso hasta explicar el origen de la diferencia.</p><div class="mp-skills"><span>Conciliación de datos</span><span>Cuadraturas masivas</span><span>Requerimientos de cliente</span><span>Protocolos de comunicación</span></div></div></details>
+        <details class="det persona"><summary>Desarrollo de sistemas</summary><div class="det-body"><p>Con el equipo de desarrollo trabajaba como analista funcional: descomponía la necesidad operativa en reglas explícitas, condiciones y cruces de datos, muchas veces escribiendo la lógica directamente en lenguaje de consultas SQL, y validaba cada entrega contra casos reales antes de liberarla al equipo.</p><div class="mp-skills"><span>Análisis funcional</span><span>Levantamiento de requerimientos</span><span>Lógica SQL</span><span>Validación funcional</span></div></div></details>
+        <details class="det persona"><summary>Procuradores y abogados</summary><div class="det-body"><p>Entre lo jurídico y lo operativo hacía de traductora en ambas direcciones: convertía el procedimiento judicial en pasos operativos que cualquiera pudiera ejecutar sin ser abogado, y convertía las necesidades del proceso en solicitudes precisas para quienes litigaban.</p><div class="mp-skills"><span>Traducción entre dominios</span><span>Documentación de procesos</span><span>Instructivos</span><span>Coordinación interfuncional</span></div></div></details>
+        <details class="det persona"><summary>Equipo administrativo</summary><div class="det-body"><p>Cada proceso que se derivaba seguía el mismo estándar: documentarlo (instructivo escrito o video), asignarlo formalmente y controlar la calidad después. El conocimiento no quedaba en la cabeza de nadie: quedaba escrito, versionado y auditable.</p><div class="mp-skills"><span>Estandarización</span><span>Transferencia de conocimiento</span><span>Control de calidad</span><span>Trazabilidad</span></div></div></details>
+        <details class="det persona"><summary>Contabilidad y rendiciones</summary><div class="det-body"><p>Sobre el dinero mantenía control de secuencia y de plazo: cada monto consignado tenía que avanzar por etapas definidas y en tiempo, porque el costo del retraso era real y diario. El control cruzaba lo procesal con lo financiero en una sola vista.</p><div class="mp-skills"><span>Control de gestión</span><span>Plazos financieros</span><span>Trazabilidad de fondos</span><span>Conciliación operativo-contable</span></div></div></details>
+        <details class="det persona"><summary>Regulador (vía clientes)</summary><div class="det-body"><p>Cuando el dato viajaba hacia el regulador, la exigencia subía: cada diferencia entre registros debía tener origen identificado, secuencia reconstruida y respaldo documental capaz de sostener lo que el cliente reportaba a la Superintendencia de Pensiones.</p><div class="mp-skills"><span>Análisis de causa raíz</span><span>Integridad de datos</span><span>Respaldo documental</span><span>Rigor en el detalle</span></div></div></details>
+      </div>
+      <div class="map-group">
+        <h4>Plataformas y sistemas</h4>
+        <details class="det plataforma"><summary>Sistema de gestión interno</summary><div class="det-body"><p>Al sistema propio de la empresa no solo lo operaba: lo extendía. Detectaba qué documentos y flujos faltaban, especificaba la plantilla o el módulo nuevo, y dejaba la funcionalidad disponible para que todo el equipo la usara sin depender de nadie.</p><div class="mp-skills"><span>Mejora de sistemas desde el uso</span><span>Especificación funcional</span><span>Automatización documental</span></div></div></details>
+        <details class="det plataforma"><summary>SQL Server</summary><div class="det-body"><p>Sobre la base de datos el trabajo era de consultas y vistas cruzando decenas de miles de registros: detectar inconsistencias, priorizar cartera, alimentar el sistema de control y producir salidas ya listas en el formato del destinatario, sin retrabajo posterior.</p><div class="mp-skills"><span>Consultas y vistas</span><span>Cruces masivos</span><span>Detección de inconsistencias</span><span>Salidas por formato</span></div></div></details>
+        <details class="det plataforma"><summary>PreviRed · Justicia digital</summary><div class="det-body"><p>Mi trabajo era lograr que nuestros sistemas y la plataforma judicial se entendieran: preparaba los datos internos en el formato exacto que la plataforma necesita para procesar solicitudes masivas, y cuando algo era rechazado, ese caso entraba a un ciclo de revisión: entender el motivo, corregir y volver a cargar hasta dejarlo procesado.</p><div class="mp-skills"><span>Integración entre sistemas</span><span>Transformación de formatos</span><span>Gestión de rechazos</span><span>Ciclos de control</span></div></div></details>
+        <details class="det plataforma"><summary>Plataformas de cada cliente</summary><div class="det-body"><p>Cada cliente traía su propio formato, canal y nomenclatura. El trabajo era de normalización: convertir cuatro estándares externos distintos en un estándar interno único que el equipo pudiera interpretar y accionar sin ambigüedad.</p><div class="mp-skills"><span>Normalización de datos</span><span>Homologación</span><span>Estándares internos</span><span>Gestión multicliente</span></div></div></details>
+        <details class="det plataforma"><summary>Contacto masivo a deudores</summary><div class="det-body"><p>Las campañas de contacto funcionaban como un proceso parametrizado: consultas que segmentaban a quién contactar, plantillas con variables, calendario por cliente y medición de resultados para ajustar la priorización de cada ciclo.</p><div class="mp-skills"><span>Segmentación con SQL</span><span>Parametrización</span><span>Medición y ajuste</span><span>Calendarios operativos</span></div></div></details>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -543,16 +597,34 @@
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">03 · Habilidades</p>
-      <h2>Toca una habilidad: dónde la apliqué y dónde más sirve</h2>
+      <h2>Abre una habilidad: dónde la apliqué y dónde más sirve</h2>
       <p>Tres grupos: técnicas, de proceso y blandas. Cada una con aplicaciones reales, y con el contexto amplio donde esa misma habilidad vuelve a ser útil.</p>
     </div>
-    <div class="hab-flex">
-      <div id="hab-cols"></div>
-      <aside class="hab-panel" id="hab-panel" aria-live="polite">
-        <p class="tipo" id="hp-tipo">Habilidades</p>
-        <h3 id="hp-titulo">Elige una para empezar</h3>
-        <div id="hp-cuerpo"><p class="vacio">Cada habilidad muestra dónde la puse en juego y en qué otros contextos sirve. Todo lo que está aquí, lo hice.</p></div>
-      </aside>
+    <div class="hab-static">
+      <div class="hab-grupo g-tec">
+        <h3>Técnicas</h3>
+        <details class="det"><summary>SQL: consultas, vistas y cruces</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Priorización y control de una cartera de decenas de miles de causas, alimentada por consultas al sistema interno.</li><li>Salidas generadas directamente en el formato exacto que exigía cada cliente, sin retrabajo posterior.</li><li>Segmentación de campañas de contacto masivo, parametrizable por cliente y estado.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Reportería, conciliaciones, auditoría de datos y análisis operacional en cualquier industria con volumen: banca, seguros, logística, retail, SaaS.</p></div></details>
+        <details class="det"><summary>Excel avanzado</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Un sistema de control de cartera con más de 20 vistas interconectadas: prioridades, responsables, excepciones y reglas documentadas dentro del propio libro.</li><li>Cuadraturas masivas sobre bases de decenas de miles de registros.</li><li>Herramientas de trabajo para el equipo: plantillas de verificación, controles de carga, seguimiento de avance.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Modelos de control, presupuestos, tableros operativos y limpieza de datos en cualquier back office o área de operaciones.</p></div></details>
+        <details class="det"><summary>Análisis funcional</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Automatización de expedientes de incobrabilidad: especifiqué la lógica y fui el puente con el desarrollo que la implementó. Escala final: miles de casos mensuales.</li><li>Módulo de generación masiva de escritos: de una carga de archivo a documentos personalizados, disponible para todo el equipo.</li><li>Integración de datos con la plataforma del sistema judicial: los datos internos se preparaban en el formato exacto que la plataforma exige para procesar solicitudes masivas, y cada rechazo entraba a un ciclo de corrección y recarga hasta quedar procesado.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Implementación de sistemas, ERP y CRM, automatizaciones y mejoras de plataforma: el rol que traduce lo que el negocio necesita en lo que el desarrollo construye.</p></div></details>
+        <details class="det"><summary>Modelamiento de reglas de negocio</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Las reglas de cálculo de honorarios de los cuatro clientes, cada una con tramos y repartos distintos, aprendidas del negocio con la asesoría de gerencia y traducidas a lógica calculable.</li><li>Criterios de elegibilidad documentados y auditables: qué causa entra a análisis, cuáles se pueden fusionar, qué excepciones bloquean.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Pricing, comisiones, facturación, políticas de crédito: cualquier lugar donde una regla comercial deba convertirse en cálculo.</p></div></details>
+        <details class="det"><summary>Conciliación y calidad de datos</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Conciliación de una cartera de más de 60.000 registros con un cliente institucional: 99,3% de cuadratura.</li><li>Cuadraturas en dos dimensiones a la vez: el estado procesal de cada juicio, y por separado los saldos vigentes y pendientes de cada deuda, compuesta a su vez por planillas y períodos. Cada asignación cuadrada en todo sentido.</li><li>Informes que explicaban el origen exacto de cada diferencia entre registros, usados por los clientes ante el regulador.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Conciliación bancaria y contable, control de inventarios, migraciones de datos y reportería regulatoria.</p></div></details>
+        <details class="det"><summary>Power BI: modelado y dashboards</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Modelado de datos, DAX y construcción de dashboards, con formación de la Universidad de Chile (2025).</li><li>El complemento natural de mi análisis: llevar lo que descubro en Excel y SQL a visualizaciones que cuentan la historia del dato.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Tableros de indicadores para equipos de operaciones, finanzas o comercial.</p></div></details>
+      </div>
+      <div class="hab-grupo g-pro">
+        <h3>De proceso</h3>
+        <details class="det"><summary>Diseño y estandarización de procesos</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Procesos complejos del rubro convertidos en manuales paso a paso con las consultas ya construidas, ejecutables sin conocimiento previo.</li><li>Instructivos que traducen procedimientos judiciales a lenguaje para no abogados: el equipo dejó de depender de un abogado para interpretar un expediente.</li><li>Protocolos por cliente sistematizados: quién genera cada documento, quién firma, en qué formato exacto.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">SOPs, onboarding, certificaciones de calidad y escalamiento de operaciones en cualquier rubro.</p></div></details>
+        <details class="det"><summary>Documentación y transferencia de procesos</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Cada proceso que sistematicé y transferí siguió el mismo diseño: instructivo escrito o video, entrega formal y acuse de recibo. Diseñados para no depender de una sola persona.</li><li>Controles de calidad periódicos sobre lo transferido: los desvíos se detectaban rápido, precisamente para que no escalaran.</li><li>Tareas informales convertidas en procedimientos formales, versionados y auditables.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Continuidad operativa y gestión del conocimiento: que ninguna operación se detenga porque alguien se fue de vacaciones o de la empresa.</p></div></details>
+        <details class="det"><summary>Control de gestión y plazos</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Tres tipos de plazo controlados a la vez: el comprometido con cada cliente, el procesal de los tribunales y el financiero del dinero consignado, con costo diario por retraso.</li><li>Indicadores de avance por antigüedad de gestión: verificar si la cartera se movía de verdad o solo generaba actividad.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">SLAs, vencimientos, compliance, cobranza y cualquier flujo donde el atraso tenga costo.</p></div></details>
+        <details class="det"><summary>Gestión de excepciones</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Ciclos de control de rechazos con las plataformas judiciales: revisar, clasificar, corregir, recargar.</li><li>Detección de casos que no calzaban con la regla general y diseño del tratamiento diferenciado para cada tipo.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Postventa, reclamos, rechazos de integraciones y los casos borde de cualquier proceso masivo.</p></div></details>
+        <details class="det"><summary>Normalización multicliente</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Cuatro clientes con formatos, canales y nomenclaturas distintas, unificados en un estándar interno único accionable por el equipo.</li><li>Tablas de homologación entre códigos internos y los de cada plataforma externa.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Integración de proveedores, clientes o sucursales con estándares distintos; migraciones y consolidación de datos.</p></div></details>
+      </div>
+      <div class="hab-grupo g-sua">
+        <h3>Blandas</h3>
+        <details class="det"><summary>Traducción negocio–tecnología</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Del jurídico al operativo: procedimientos judiciales explicados para que cualquiera los ejecutara.</li><li>Del negocio al técnico: necesidades operativas convertidas en requerimientos que un desarrollador puede programar.</li><li>Del dato al cliente: diferencias entre registros explicadas en el lenguaje de quien las reporta al regulador.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Cualquier proyecto donde negocio y desarrollo necesiten entenderse: implementaciones, automatizaciones, mejoras de sistemas.</p></div></details>
+        <details class="det"><summary>Comunicación de análisis</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Convertir datos operativos en escenarios de decisión: qué está pasando, por qué, y qué efecto tiene cada alternativa río abajo.</li><li>Presentado a todo nivel: mesas de trabajo con gerencia general, contrapartes técnicas de clientes y equipos internos.</li><li>Propuestas de mejora sustentadas en datos que se convirtieron en decisiones aprobadas y aplicadas.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Presentar análisis a jefaturas, clientes o equipos en cualquier industria: convertir datos en decisiones.</p></div></details>
+        <details class="det"><summary>Anticipación</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>Reconocida por los clientes por responder no solo lo solicitado, sino lo que iban a necesitar después, incluso cuando ellos no lo habían identificado.</li><li>Evaluación de impacto antes de cada cambio: qué se rompe río abajo si movemos esta pieza.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Gestión de clientes internos y externos, diseño de procesos y prevención de errores costosos.</p></div></details>
+        <details class="det"><summary>Curiosidad y aprendizaje continuo</summary><div class="det-body"><p class="aplique">Dónde la apliqué</p><ul><li>SQL, Power BI y Python estudiados por iniciativa propia en universidades chilenas.</li><li>IA generativa incorporada al trabajo diario: investigación, documentación y estructuración de información, siempre con validación propia. Esta misma página nació de ese aprendizaje.</li><li>Mi frase de trabajo: lo que no sé, lo investigo.</li></ul><span class="amplio">Dónde más sirve</span><p class="transfer">Adaptación rápida a nuevos rubros, sistemas y herramientas: el músculo que hace transferible todo lo demás.</p></div></details>
+      </div>
     </div>
   </div>
 </section>
@@ -626,7 +698,6 @@
 
 <script>
 (function(){
-  /* ============ MAPA ============ */
   var nodos = [
     {id:"gerencia", ring:1, label:"Gerencia General", tipo:"Personas y roles", titulo:"Gerencia General",
      que:"Llegaba a la mesa con los datos ya estructurados: qué está pasando, por qué, y qué implica decidir en una dirección u otra. Convertía el detalle operativo en escenarios de decisión, anticipando el efecto de cada cambio sobre el resto del proceso.",
@@ -668,38 +739,23 @@
 
   var stage = document.getElementById('stage');
   var svg = document.getElementById('svglines');
-  var chips = document.getElementById('chips');
   var centro = document.getElementById('centro');
   var pTipo = document.getElementById('p-tipo');
   var pTit = document.getElementById('p-titulo');
   var pCuerpo = document.getElementById('p-cuerpo');
+  if(!stage || !svg || !centro) return;
   var inicial = {tipo:pTipo.textContent, tit:pTit.textContent, html:pCuerpo.innerHTML};
-  var botonesMapa = {};
+  var botones = {};
+  var activo = null;
 
   nodos.forEach(function(n){
     var b = document.createElement('button');
     b.className = 'nodo ' + (n.ring===1 ? 'persona' : 'plataforma');
     b.textContent = n.label;
     b.setAttribute('aria-pressed','false');
-    b.addEventListener('click', function(){ selMapa(n.id); });
+    b.addEventListener('click', function(){ sel(n.id); });
     stage.appendChild(b);
-    botonesMapa[n.id] = [b];
-  });
-
-  [['Personas y roles',1],['Plataformas y sistemas',2]].forEach(function(g){
-    var grp = document.createElement('div'); grp.className='chip-group';
-    var h = document.createElement('h4'); h.textContent = g[0]; grp.appendChild(h);
-    var row = document.createElement('div'); row.className='chip-row';
-    nodos.filter(function(n){return n.ring===g[1];}).forEach(function(n){
-      var b = document.createElement('button');
-      b.className = 'nodo ' + (n.ring===1 ? 'persona' : 'plataforma');
-      b.textContent = n.label;
-      b.setAttribute('aria-pressed','false');
-      b.addEventListener('click', function(){ selMapa(n.id); });
-      row.appendChild(b);
-      botonesMapa[n.id].push(b);
-    });
-    grp.appendChild(row); chips.appendChild(grp);
+    botones[n.id] = b;
   });
 
   function layout(){
@@ -708,14 +764,14 @@
     var cx = w/2, cy = w/2;
     var r1 = w*0.30, r2 = w*0.455;
     svg.setAttribute('viewBox','0 0 '+w+' '+w);
-    svg.innerHTML = '';
+    while(svg.firstChild){ svg.removeChild(svg.firstChild); }
     var inner = nodos.filter(function(n){return n.ring===1;});
     var outer = nodos.filter(function(n){return n.ring===2;});
     function place(lista, r, offset){
       lista.forEach(function(n, i){
         var ang = offset + (i/lista.length)*Math.PI*2;
         var x = cx + r*Math.cos(ang), y = cy + r*Math.sin(ang);
-        var b = botonesMapa[n.id][0];
+        var b = botones[n.id];
         b.style.left = (x/w*100)+'%';
         b.style.top = (y/w*100)+'%';
         var ln = document.createElementNS('http://www.w3.org/2000/svg','line');
@@ -730,20 +786,17 @@
     marcar(activo);
   }
 
-  var activo = null;
   function marcar(id){
     Array.prototype.forEach.call(svg.querySelectorAll('line'), function(l){
       l.classList.toggle('on', l.dataset.id === id);
     });
   }
-  function selMapa(id){
+  function sel(id){
     activo = id;
-    Object.keys(botonesMapa).forEach(function(k){
-      botonesMapa[k].forEach(function(b){
-        var on = (k===id);
-        b.classList.toggle('activo', on);
-        b.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
+    Object.keys(botones).forEach(function(k){
+      var on = (k===id);
+      botones[k].classList.toggle('activo', on);
+      botones[k].setAttribute('aria-pressed', on ? 'true' : 'false');
     });
     centro.setAttribute('aria-pressed','false');
     marcar(id);
@@ -751,15 +804,13 @@
     pTipo.textContent = n.tipo;
     pTit.textContent = n.titulo;
     var sks = n.sk.map(function(s){return '<span>'+s+'</span>';}).join('');
-    pCuerpo.innerHTML = '<p>'+n.que+'</p><div class="mp-skills">'+sks+'</div>';
-    if(window.innerWidth < 940){
-      document.getElementById('panel').scrollIntoView({behavior:'smooth', block:'nearest'});
-    }
+    pCuerpo.innerHTML = '<p>'+n.que+'</p><div class="mp-skills" style="margin-top:16px;padding-top:15px;border-top:1px dashed #D9CDBA">'+sks+'</div>';
   }
   centro.addEventListener('click', function(){
     activo = null;
-    Object.keys(botonesMapa).forEach(function(k){
-      botonesMapa[k].forEach(function(b){ b.classList.remove('activo'); b.setAttribute('aria-pressed','false'); });
+    Object.keys(botones).forEach(function(k){
+      botones[k].classList.remove('activo');
+      botones[k].setAttribute('aria-pressed','false');
     });
     centro.setAttribute('aria-pressed','true');
     marcar(null);
@@ -767,127 +818,14 @@
     pTit.textContent = inicial.tit;
     pCuerpo.innerHTML = inicial.html;
   });
-  window.addEventListener('resize', layout);
-  layout();
 
-  /* ============ HABILIDADES ============ */
-  var grupos = [
-    {clave:"g-tec", nombre:"Técnicas", tipo:"Habilidad técnica", habs:[
-      {id:"hsql", n:"SQL: consultas, vistas y cruces",
-       ap:["Priorización y control de una cartera de decenas de miles de causas, alimentada por consultas al sistema interno.",
-           "Salidas generadas directamente en el formato exacto que exigía cada cliente, sin retrabajo posterior.",
-           "Segmentación de campañas de contacto masivo, parametrizable por cliente y estado."],
-       tr:"Reportería, conciliaciones, auditoría de datos y análisis operacional en cualquier industria con volumen: banca, seguros, logística, retail, SaaS."},
-      {id:"hexcel", n:"Excel avanzado",
-       ap:["Un sistema de control de cartera con más de 20 vistas interconectadas: prioridades, responsables, excepciones y reglas documentadas dentro del propio libro.",
-           "Cuadraturas masivas sobre bases de decenas de miles de registros.",
-           "Herramientas de trabajo para el equipo: plantillas de verificación, controles de carga, seguimiento de avance."],
-       tr:"Modelos de control, presupuestos, tableros operativos y limpieza de datos en cualquier back office o área de operaciones."},
-      {id:"hfun", n:"Análisis funcional",
-       ap:["Automatización de expedientes de incobrabilidad: especifiqué la lógica y fui el puente con el desarrollo que la implementó. Escala final: miles de casos mensuales.",
-           "Módulo de generación masiva de escritos: de una carga de archivo a documentos personalizados, disponible para todo el equipo.",
-           "Integración de datos con la plataforma del sistema judicial: los datos internos se preparaban en el formato exacto que la plataforma exige para procesar solicitudes masivas, y cada rechazo entraba a un ciclo de corrección y recarga hasta quedar procesado."],
-       tr:"Implementación de sistemas, ERP y CRM, automatizaciones y mejoras de plataforma: el rol que traduce lo que el negocio necesita en lo que el desarrollo construye."},
-      {id:"hreglas", n:"Modelamiento de reglas de negocio",
-       ap:["Las reglas de cálculo de honorarios de los cuatro clientes, cada una con tramos y repartos distintos, aprendidas del negocio con la asesoría de gerencia y traducidas a lógica calculable.",
-           "Criterios de elegibilidad documentados y auditables: qué causa entra a análisis, cuáles se pueden fusionar, qué excepciones bloquean."],
-       tr:"Pricing, comisiones, facturación, políticas de crédito: cualquier lugar donde una regla comercial deba convertirse en cálculo."},
-      {id:"hconc", n:"Conciliación y calidad de datos",
-       ap:["Conciliación de una cartera de más de 60.000 registros con un cliente institucional: 99,3% de cuadratura.",
-           "Cuadraturas en dos dimensiones a la vez: el estado procesal de cada juicio, y por separado los saldos vigentes y pendientes de cada deuda, compuesta a su vez por planillas y períodos. Cada asignación cuadrada en todo sentido.",
-           "Informes que explicaban el origen exacto de cada diferencia entre registros, usados por los clientes ante el regulador."],
-       tr:"Conciliación bancaria y contable, control de inventarios, migraciones de datos y reportería regulatoria."},
-      {id:"hpbi", n:"Power BI: modelado y dashboards",
-       ap:["Modelado de datos, DAX y construcción de dashboards, con formación de la Universidad de Chile (2025).",
-           "El complemento natural de mi análisis: llevar lo que descubro en Excel y SQL a visualizaciones que cuentan la historia del dato."],
-       tr:"Tableros de indicadores para equipos de operaciones, finanzas o comercial."}
-    ]},
-    {clave:"g-pro", nombre:"De proceso", tipo:"Habilidad de proceso", habs:[
-      {id:"hdis", n:"Diseño y estandarización de procesos",
-       ap:["Procesos complejos del rubro convertidos en manuales paso a paso con las consultas ya construidas, ejecutables sin conocimiento previo.",
-           "Instructivos que traducen procedimientos judiciales a lenguaje para no abogados: el equipo dejó de depender de un abogado para interpretar un expediente.",
-           "Protocolos por cliente sistematizados: quién genera cada documento, quién firma, en qué formato exacto."],
-       tr:"SOPs, onboarding, certificaciones de calidad y escalamiento de operaciones en cualquier rubro."},
-      {id:"hdoc", n:"Documentación y transferencia de procesos",
-       ap:["Cada proceso que sistematicé y transferí siguió el mismo diseño: instructivo escrito o video, entrega formal y acuse de recibo. Diseñados para no depender de una sola persona.",
-           "Controles de calidad periódicos sobre lo transferido: los desvíos se detectaban rápido, precisamente para que no escalaran.",
-           "Tareas informales convertidas en procedimientos formales, versionados y auditables."],
-       tr:"Continuidad operativa y gestión del conocimiento: que ninguna operación se detenga porque alguien se fue de vacaciones o de la empresa."},
-      {id:"hpla", n:"Control de gestión y plazos",
-       ap:["Tres tipos de plazo controlados a la vez: el comprometido con cada cliente, el procesal de los tribunales y el financiero del dinero consignado, con costo diario por retraso.",
-           "Indicadores de avance por antigüedad de gestión: verificar si la cartera se movía de verdad o solo generaba actividad."],
-       tr:"SLAs, vencimientos, compliance, cobranza y cualquier flujo donde el atraso tenga costo."},
-      {id:"hexc", n:"Gestión de excepciones",
-       ap:["Ciclos de control de rechazos con las plataformas judiciales: revisar, clasificar, corregir, recargar.",
-           "Detección de casos que no calzaban con la regla general y diseño del tratamiento diferenciado para cada tipo."],
-       tr:"Postventa, reclamos, rechazos de integraciones y los casos borde de cualquier proceso masivo."},
-      {id:"hnor", n:"Normalización multicliente",
-       ap:["Cuatro clientes con formatos, canales y nomenclaturas distintas, unificados en un estándar interno único accionable por el equipo.",
-           "Tablas de homologación entre códigos internos y los de cada plataforma externa."],
-       tr:"Integración de proveedores, clientes o sucursales con estándares distintos; migraciones y consolidación de datos."}
-    ]},
-    {clave:"g-sua", nombre:"Blandas", tipo:"Habilidad blanda", habs:[
-      {id:"htra", n:"Traducción negocio–tecnología",
-       ap:["Del jurídico al operativo: procedimientos judiciales explicados para que cualquiera los ejecutara.",
-           "Del negocio al técnico: necesidades operativas convertidas en requerimientos que un desarrollador puede programar.",
-           "Del dato al cliente: diferencias entre registros explicadas en el lenguaje de quien las reporta al regulador."],
-       tr:"Cualquier proyecto donde negocio y desarrollo necesiten entenderse: implementaciones, automatizaciones, mejoras de sistemas."},
-      {id:"heje", n:"Comunicación de análisis",
-       ap:["Convertir datos operativos en escenarios de decisión: qué está pasando, por qué, y qué efecto tiene cada alternativa río abajo.",
-           "Presentado a todo nivel: mesas de trabajo con gerencia general, contrapartes técnicas de clientes y equipos internos.",
-           "Propuestas de mejora sustentadas en datos que se convirtieron en decisiones aprobadas y aplicadas."],
-       tr:"Presentar análisis a jefaturas, clientes o equipos en cualquier industria: convertir datos en decisiones."},
-      {id:"hant", n:"Anticipación",
-       ap:["Reconocida por los clientes por responder no solo lo solicitado, sino lo que iban a necesitar después, incluso cuando ellos no lo habían identificado.",
-           "Evaluación de impacto antes de cada cambio: qué se rompe río abajo si movemos esta pieza."],
-       tr:"Gestión de clientes internos y externos, diseño de procesos y prevención de errores costosos."},
-      {id:"hcur", n:"Curiosidad y aprendizaje continuo",
-       ap:["SQL, Power BI y Python estudiados por iniciativa propia en universidades chilenas.",
-           "IA generativa incorporada al trabajo diario: investigación, documentación y estructuración de información, siempre con validación propia. Esta misma página nació de ese aprendizaje.",
-           "Mi frase de trabajo: lo que no sé, lo investigo."],
-       tr:"Adaptación rápida a nuevos rubros, sistemas y herramientas: el músculo que hace transferible todo lo demás."}
-    ]}
-  ];
-
-  var cols = document.getElementById('hab-cols');
-  var hpTipo = document.getElementById('hp-tipo');
-  var hpTit = document.getElementById('hp-titulo');
-  var hpCuerpo = document.getElementById('hp-cuerpo');
-  var botonesHab = {};
-
-  grupos.forEach(function(g){
-    var div = document.createElement('div');
-    div.className = 'hab-grupo ' + g.clave;
-    var h = document.createElement('h3'); h.textContent = g.nombre; div.appendChild(h);
-    var row = document.createElement('div'); row.className = 'hab-row';
-    g.habs.forEach(function(hb){
-      var b = document.createElement('button');
-      b.className = 'hab'; b.textContent = hb.n;
-      b.setAttribute('aria-pressed','false');
-      b.addEventListener('click', function(){ selHab(hb, g, b); });
-      row.appendChild(b);
-      botonesHab[hb.id] = b;
-    });
-    div.appendChild(row);
-    cols.appendChild(div);
-  });
-
-  function selHab(hb, g, btn){
-    Object.keys(botonesHab).forEach(function(k){
-      botonesHab[k].classList.remove('activo');
-      botonesHab[k].setAttribute('aria-pressed','false');
-    });
-    btn.classList.add('activo');
-    btn.setAttribute('aria-pressed','true');
-    hpTipo.textContent = g.tipo;
-    hpTit.textContent = hb.n;
-    var lis = hb.ap.map(function(a){return '<li>'+a+'</li>';}).join('');
-    hpCuerpo.innerHTML = '<p class="aplique">Dónde la apliqué</p><ul>'+lis+'</ul>'
-      + '<p class="amplio">Dónde más sirve</p><p class="transfer">'+hb.tr+'</p>';
-    if(window.innerWidth < 940){
-      document.getElementById('hab-panel').scrollIntoView({behavior:'smooth', block:'nearest'});
-    }
+  function modo(){
+    var ancho = window.innerWidth >= 941;
+    document.body.classList.toggle('js-wide', ancho);
+    if(ancho){ layout(); }
   }
+  window.addEventListener('resize', modo);
+  modo();
 })();
 </script>
 </body>
