@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nahir Garavito · López S.A. · Mi experiencia más significativa</title>
+<meta name="description" content="Nahir Garavito en López S.A. (2018-2025): 7 años volviendo más simple, medible y automática una operación intensa en datos, reglas y plazos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,640;1,9..144,500&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#18212B;
+    --ink-2:#44515E;
+    --navy:#15324B;
+    --navy-2:#0D2437;
+    --wine:#8C2F3F;
+    --wine-2:#6E2231;
+    --emerald:#1D7A59;
+    --emerald-2:#14563F;
+    --sky:#5FA8D3;
+    --sky-soft:#DDEFF8;
+    --sand:#F4EBDD;
+    --paper:#FFFFFF;
+    --canvas:#F4F6F8;
+    --line:#DDE3E8;
+    --shadow:0 18px 50px rgba(21,50,75,.10);
+    --shadow-soft:0 10px 30px rgba(21,50,75,.07);
+    --ff-display:"Fraunces",Georgia,serif;
+    --ff-body:"Instrument Sans",system-ui,sans-serif;
+    --ff-mono:"Space Mono",ui-monospace,monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:82px}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    background:var(--canvas);color:var(--ink);
+    font-family:var(--ff-body);font-size:17px;line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 30px}
+  .eyebrow{
+    font-family:var(--ff-mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--wine);
+  }
+  a{color:var(--wine)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+
+  /* NAV */
+  nav.top{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.86);backdrop-filter:blur(18px) saturate(140%);
+    border-bottom:1px solid rgba(221,227,232,.86);
+    box-shadow:0 8px 28px rgba(13,36,55,.045);
+  }
+  nav.top .wrap{display:flex;justify-content:space-between;align-items:center;min-height:64px;gap:18px}
+  nav.top .nombre{
+    font-family:var(--ff-mono);font-size:12px;letter-spacing:.14em;font-weight:700;color:var(--navy);
+    white-space:nowrap;
+  }
+  nav.top .links{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+  nav.top .links a{
+    font-family:var(--ff-mono);font-size:10.5px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;
+    text-decoration:none;color:var(--ink-2);padding:8px 12px;border-radius:999px;
+    transition:.18s ease;
+  }
+  nav.top .links a:hover{background:var(--navy);color:#fff;transform:translateY(-1px)}
+
+  /* HERO */
+  header.hero{
+    padding:76px 0 68px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 85% 17%, rgba(95,168,211,.18), transparent 22%),
+      radial-gradient(circle at 92% 54%, rgba(29,122,89,.10), transparent 25%),
+      linear-gradient(180deg,#fff 0%,#F7FAFC 100%);
+    border-bottom:1px solid var(--line);
+  }
+  header.hero::after{
+    content:"";position:absolute;right:-120px;top:70px;width:430px;height:430px;
+    border:1px solid rgba(21,50,75,.08);border-radius:50%;box-shadow:
+    0 0 0 38px rgba(21,50,75,.018),0 0 0 92px rgba(21,50,75,.012);
+    pointer-events:none;
+  }
+  .conf{position:absolute;border-radius:50%;opacity:.82;pointer-events:none;filter:saturate(.9)}
+  .hero .badge{
+    display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:#fff;
+    font-family:var(--ff-mono);font-size:11.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+    padding:10px 16px;border-radius:999px;
+    box-shadow:0 8px 24px rgba(21,50,75,.16),3px 3px 0 var(--sky);
+  }
+  .quien{
+    margin:30px 0 0;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  }
+  .quien .q-nombre{
+    font-family:var(--ff-display);font-weight:640;font-size:clamp(28px,3.6vw,42px);
+    letter-spacing:-.02em;color:var(--navy-2);
+  }
+  .quien .q-sep{font-family:var(--ff-display);font-size:clamp(24px,3vw,34px);color:#9AA6B0}
+  .quien .q-emp{
+    font-family:var(--ff-display);font-weight:640;font-style:italic;font-size:clamp(28px,3.6vw,42px);
+    letter-spacing:-.02em;color:var(--wine);
+  }
+  .quien .q-fechas{
+    font-family:var(--ff-mono);font-size:12px;font-weight:700;letter-spacing:.12em;
+    color:var(--navy);background:var(--sky-soft);border:1px solid #C4E0F1;
+    padding:7px 13px;border-radius:999px;white-space:nowrap;
+  }
+  .hero .identidad{
+    margin:16px 0 0;font-family:var(--ff-mono);font-size:12px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--wine);
+  }
+  .hero h1{
+    font-family:var(--ff-display);font-weight:560;
+    font-size:clamp(31px,4.6vw,52px);line-height:1.08;letter-spacing:-.03em;
+    max-width:21ch;margin:18px 0 26px;color:var(--navy-2);
+  }
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--emerald)}
+  .hero p.lede{max-width:64ch;font-size:clamp(17px,1.8vw,20px);line-height:1.7;color:var(--ink-2)}
+  .hero .byline{
+    display:inline-block;margin-top:24px;padding-top:16px;border-top:1px solid var(--line);
+    font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.06em;color:#687583;
+  }
+
+  .indice{margin-top:46px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative;z-index:2}
+  .indice a{
+    position:relative;display:block;overflow:hidden;text-decoration:none;color:var(--ink);
+    background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:18px;
+    padding:20px 18px 18px;min-height:144px;box-shadow:var(--shadow-soft);
+    transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+  }
+  .indice a::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--navy)}
+  .indice a:nth-child(2)::before{background:var(--sky)}
+  .indice a:nth-child(3)::before{background:var(--wine)}
+  .indice a:nth-child(4)::before{background:var(--emerald)}
+  .indice a:nth-child(5)::before{background:#8A6248}
+  .indice a::after{content:"↘";position:absolute;right:16px;top:15px;font-size:16px;color:#99A4AE;transition:.18s ease}
+  .indice a:hover{transform:translateY(-5px);box-shadow:0 20px 38px rgba(21,50,75,.12);border-color:#CBD5DD}
+  .indice a:hover::after{transform:translate(2px,2px);color:var(--navy)}
+  .indice .n{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.14em;color:var(--navy)}
+  .indice a:nth-child(2) .n{color:#3E82AC}
+  .indice a:nth-child(3) .n{color:var(--wine)}
+  .indice a:nth-child(4) .n{color:var(--emerald)}
+  .indice a:nth-child(5) .n{color:#8A6248}
+  .indice b{display:block;font-family:var(--ff-display);font-weight:560;font-size:19px;margin:10px 0 6px;color:var(--navy-2)}
+  .indice span{font-size:12.5px;line-height:1.45;color:#66727E}
+
+  /* SECTIONS */
+  section{padding:92px 0;border-bottom:1px solid var(--line);background:#fff}
+  .sec-head{max-width:68ch;margin-bottom:42px}
+  .sec-head h2{
+    font-family:var(--ff-display);font-weight:560;font-size:clamp(31px,4vw,46px);line-height:1.1;
+    margin:12px 0 14px;letter-spacing:-.025em;color:var(--navy-2)
+  }
+  .sec-head p{color:var(--ink-2)}
+  .ficha{
+    display:inline-block;font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.10em;text-transform:uppercase;
+    color:#65727E;margin-bottom:20px;background:#F1F5F7;border:1px solid #E0E7EB;border-radius:999px;padding:8px 12px;
+  }
+  .ficha b{color:var(--navy)}
+
+  /* ROLE */
+  .rol-grid{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(300px,.82fr);gap:34px;align-items:start}
+  .rol-txt{
+    background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px 32px;
+    box-shadow:var(--shadow-soft);
+  }
+  .rol-txt p+p{margin-top:16px}
+  .rol-txt strong{color:var(--emerald-2)}
+  .matices{
+    position:relative;overflow:hidden;background:linear-gradient(145deg,var(--navy) 0%,var(--navy-2) 100%);
+    border:0;border-radius:24px;padding:28px 28px 30px;box-shadow:var(--shadow);color:#EEF5F9;
+  }
+  .matices::after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-70px;top:-55px;background:rgba(95,168,211,.14)}
+  .matices h3{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--sky-soft);margin-bottom:18px;font-weight:700}
+  .matices ul{list-style:none;display:grid;gap:14px;position:relative;z-index:1}
+  .matices li{font-size:14.5px;line-height:1.5;color:#DDE9F0;padding-left:25px;position:relative}
+  .matices li b{color:#fff}
+  .matices li::before{content:"";position:absolute;left:0;top:7px;width:11px;height:11px;border-radius:4px;transform:rotate(45deg);background:var(--sky)}
+  .matices li:nth-child(2)::before{background:#D98696}
+  .matices li:nth-child(3)::before{background:#58B78F}
+  .matices li:nth-child(4)::before{background:#99CFEA}
+  .matices li:nth-child(5)::before{background:#C6A489}
+
+  .patron{
+    margin-top:36px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px;
+    box-shadow:var(--shadow-soft);
+  }
+  .patron h3{font-family:var(--ff-display);font-weight:560;font-size:clamp(23px,2.8vw,32px);margin-bottom:8px;color:var(--navy-2)}
+  .patron>p{color:var(--ink-2);max-width:68ch}
+  .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+  .paso{
+    position:relative;overflow:hidden;border-radius:20px;padding:24px 22px 26px;color:#fff;min-height:250px;
+    box-shadow:0 14px 30px rgba(21,50,75,.12)
+  }
+  .paso::after{content:"";position:absolute;right:-35px;bottom:-48px;width:125px;height:125px;border-radius:50%;background:rgba(255,255,255,.09)}
+  .paso:nth-child(1){background:linear-gradient(145deg,#3E82AC,#22597C)}
+  .paso:nth-child(2){background:linear-gradient(145deg,#204563,var(--navy))}
+  .paso:nth-child(3){background:linear-gradient(145deg,#A23F50,var(--wine-2))}
+  .paso:nth-child(4){background:linear-gradient(145deg,#278867,var(--emerald-2))}
+  .paso .k{font-family:var(--ff-mono);font-size:10px;letter-spacing:.16em;opacity:.82}
+  .paso h4{font-family:var(--ff-display);font-weight:560;font-size:23px;margin:10px 0 10px}
+  .paso p{font-size:14px;line-height:1.56;opacity:.95;position:relative;z-index:1}
+  .conecta{margin-top:25px;font-size:14.5px;color:#5A6773}
+  .conecta b{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
+
+  /* MAPA */
+  #mapa{
+    background:
+      radial-gradient(circle at 88% 10%,rgba(95,168,211,.14),transparent 26%),
+      linear-gradient(150deg,#0D2234 0%,var(--navy-2) 60%,#11384A 100%);
+    color:#EDF3F8;
+  }
+  #mapa .eyebrow{color:#89C4E4}
+  #mapa .sec-head h2{color:#fff}
+  #mapa .sec-head p{color:#B9CBD9}
+  .map-legend{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:10px;font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;color:#C9D7E2}
+  .map-legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+  .leg-p i{background:#D98696}
+  .leg-s i{background:var(--sky)}
+  .map-flex{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:30px;align-items:start}
+  .map-stage{position:relative;width:100%;max-width:640px;aspect-ratio:1/1;margin:0 auto}
+  .map-stage svg{position:absolute;inset:0;width:100%;height:100%}
+  .map-stage svg line{stroke:rgba(237,243,248,.20);stroke-width:1.2}
+  .map-stage svg line.on{stroke:#89C4E4;stroke-width:2}
+  .nodo{
+    position:absolute;transform:translate(-50%,-50%);
+    font-family:var(--ff-body);font-weight:600;font-size:13px;line-height:1.25;
+    padding:9px 14px;border-radius:999px;cursor:pointer;border:1.5px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease;max-width:150px;text-align:center;
+  }
+  .nodo:hover{transform:translate(-50%,-50%) scale(1.06)}
+  .nodo.persona{background:var(--wine);color:#fff}
+  .nodo.plataforma{background:var(--sky-soft);color:var(--navy-2)}
+  .nodo.activo{border-color:#fff;box-shadow:0 0 0 4px rgba(237,243,248,.18)}
+  .nodo-centro{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:120px;height:120px;border-radius:50%;
+    background:#fff;color:var(--navy-2);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-family:var(--ff-display);font-weight:640;font-size:17px;
+    border:none;cursor:pointer;text-align:center;line-height:1.2;
+    box-shadow:0 0 0 12px rgba(255,255,255,.06), 0 0 0 26px rgba(255,255,255,.035);
+  }
+  .nodo-centro small{font-family:var(--ff-mono);font-weight:400;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);margin-top:4px}
+  .map-panel{
+    background:linear-gradient(160deg,#FFF9F0 0%,var(--sand) 100%);color:var(--ink);
+    border-radius:24px;padding:26px 24px 28px;min-height:320px;position:sticky;top:88px;
+    border:1px solid #E6DAC6;box-shadow:var(--shadow-soft);
+  }
+  .map-panel::before{content:"";display:block;width:42px;height:4px;background:var(--sky);border-radius:999px;margin-bottom:18px}
+  .map-panel .tipo{font-family:var(--ff-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#727C85}
+  .map-panel h3{font-family:var(--ff-display);font-weight:560;font-size:24px;margin:9px 0 14px;line-height:1.18;color:var(--navy-2)}
+  .map-panel p{font-size:14.5px;line-height:1.58;color:#404C56}
+  .map-panel .mp-skills{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;padding-top:15px;border-top:1px dashed #D9CDBA}
+  .map-panel .mp-skills span{
+    font-size:12px;font-weight:600;color:var(--navy);
+    background:#fff;border:1px solid #DFD3BE;border-radius:999px;padding:5px 11px;
+  }
+  .map-chips{display:none}
+
+  /* SKILLS */
+  #habilidades{background:linear-gradient(180deg,#F4F7F9 0%,#F8FAFB 100%)}
+  .hab-flex{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:28px;align-items:start}
+  #hab-cols{display:grid;gap:16px}
+  .hab-grupo{
+    margin:0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 20px 22px;
+    box-shadow:0 8px 24px rgba(21,50,75,.055)
+  }
+  .hab-grupo h3{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+  .hab-grupo.g-tec h3{color:var(--navy)}
+  .hab-grupo.g-pro h3{color:var(--wine)}
+  .hab-grupo.g-sua h3{color:var(--emerald)}
+  .hab-row{display:flex;flex-wrap:wrap;gap:9px}
+  .hab{
+    font-family:var(--ff-body);font-weight:600;font-size:13.5px;padding:10px 14px;border-radius:999px;cursor:pointer;
+    border:1px solid #D5DDE3;background:#fff;color:#35414C;transition:transform .14s ease,background .14s ease,color .14s ease,box-shadow .14s ease;
+  }
+  .hab:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(21,50,75,.08)}
+  .g-tec .hab.activo,.g-tec .hab:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+  .g-pro .hab.activo,.g-pro .hab:hover{background:var(--wine);border-color:var(--wine);color:#fff}
+  .g-sua .hab.activo,.g-sua .hab:hover{background:var(--emerald);border-color:var(--emerald);color:#fff}
+
+  .hab-panel{
+    background:linear-gradient(160deg,#FFF9F0 0%,var(--sand) 100%);border:1px solid #E6DAC6;border-radius:24px;
+    padding:28px 26px 30px;position:sticky;top:88px;min-height:320px;box-shadow:var(--shadow-soft)
+  }
+  .hab-panel::before{content:"";display:block;width:42px;height:4px;background:var(--wine);border-radius:999px;margin-bottom:18px}
+  .hab-panel .tipo{font-family:var(--ff-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#727C85}
+  .hab-panel h3{font-family:var(--ff-display);font-weight:560;font-size:25px;margin:9px 0 17px;line-height:1.16;color:var(--navy-2)}
+  .hab-panel .aplique,.hab-panel .amplio{font-family:var(--ff-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  .hab-panel .aplique{color:var(--wine);margin-bottom:11px}
+  .hab-panel ul{list-style:none;display:grid;gap:12px}
+  .hab-panel li{font-size:14px;line-height:1.5;color:#404C56;padding-left:20px;position:relative}
+  .hab-panel li::before{content:"→";position:absolute;left:0;color:var(--wine);font-weight:700}
+  .hab-panel .amplio{color:var(--emerald);margin:20px 0 8px;padding-top:16px;border-top:1px dashed #D9CDBA}
+  .hab-panel .transfer{font-size:14px;line-height:1.55;color:#56616B}
+  .hab-panel .vacio{font-size:15px;color:#65717B}
+
+  /* ACHIEVEMENTS */
+  #logros{
+    background:
+      radial-gradient(circle at 12% 12%,rgba(95,168,211,.12),transparent 28%),
+      linear-gradient(145deg,#0D2234 0%,var(--navy-2) 58%,#123A45 100%);
+    color:#EDF3F8;border-bottom:none;
+  }
+  #logros .eyebrow{color:#89C4E4}
+  #logros .sec-head h2{color:#fff}
+  #logros .sec-head p{color:#B9CBD9}
+  .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .prob{
+    position:relative;overflow:hidden;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.15);
+    border-radius:22px;padding:28px 26px 30px;display:flex;flex-direction:column;gap:14px;
+    backdrop-filter:blur(8px);transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  }
+  .prob:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.085)}
+  .prob::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-72px;bottom:-72px;background:rgba(95,168,211,.07)}
+  .prob .num{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.14em;color:#8AC4E4}
+  .prob h3{font-family:var(--ff-display);font-weight:560;font-size:24px;line-height:1.13;color:#fff;margin-top:2px}
+  .prob p{font-size:14.5px;line-height:1.58;color:#C7D5E0;position:relative;z-index:1}
+  .prob .res{margin-top:auto;padding-top:18px;border-top:1px dashed rgba(255,255,255,.22);font-weight:600;font-size:14.5px;color:#EDF3F8}
+  .prob .res strong{display:inline;color:#fff;background:rgba(95,168,211,.13);padding:1px 4px;border-radius:5px}
+
+  /* TOOLS + CONTACT */
+  #contacto{background:#fff}
+  .tools-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:stretch}
+  .tools-grid>div:first-child{
+    background:#fff;border:1px solid var(--line);border-radius:24px;padding:14px 24px;
+    box-shadow:var(--shadow-soft)
+  }
+  .tool{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start;padding:18px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
+  .tool:last-child{border-bottom:0}
+  .tool b{font-weight:700;color:var(--navy)}
+  .tool span{font-size:13.5px;line-height:1.5;color:#596672;text-align:left;max-width:none}
+  .honesto{
+    position:relative;overflow:hidden;background:linear-gradient(150deg,var(--navy) 0%,#173E56 100%);
+    color:#EDF3F8;border-radius:24px;padding:34px 32px 34px;box-shadow:var(--shadow)
+  }
+  .honesto::after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;right:-110px;top:-80px;background:rgba(95,168,211,.12)}
+  .honesto p.frase{font-family:var(--ff-display);font-weight:560;font-size:clamp(24px,2.7vw,32px);line-height:1.23;margin-bottom:18px;color:#fff;position:relative;z-index:1}
+  .honesto p.frase em{color:#BFE6FA;font-style:italic;font-weight:500}
+  .honesto p.busco{font-size:14.5px;line-height:1.62;color:#D2DFE8;position:relative;z-index:1}
+  .btn{display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;padding:12px 18px;border-radius:999px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-solid{background:var(--wine);color:#fff;box-shadow:0 8px 18px rgba(140,47,63,.24)}
+  .btn-ghost{border:1.5px solid rgba(237,243,248,.85);color:#EDF3F8}
+  .btn-ghost:hover{background:#fff;color:var(--navy)}
+  .honesto .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;position:relative;z-index:1}
+  .honesto .mail{
+    margin-top:14px;font-family:var(--ff-mono);font-size:13px;letter-spacing:.04em;color:#BFE6FA;position:relative;z-index:1;
+  }
+  .honesto .mail a{color:#BFE6FA;text-decoration:none;border-bottom:1px dashed rgba(191,230,250,.5)}
+  .honesto small{display:block;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.13);font-size:12.5px;line-height:1.8;color:#CBDAE4;position:relative;z-index:1}
+
+  footer{background:#F4F6F8;padding:32px 0 42px;font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;color:#687481}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  @media (max-width:1020px){
+    .indice{grid-template-columns:repeat(3,1fr)}
+    .pasos{grid-template-columns:repeat(2,1fr)}
+    .paso{min-height:0}
+  }
+  @media (max-width:940px){
+    .rol-grid,.tools-grid,.hab-flex,.map-flex{grid-template-columns:1fr;gap:24px}
+    .hab-panel,.map-panel{position:static}
+    .prob-grid{grid-template-columns:1fr}
+    .tools-grid>div:first-child{padding:10px 20px}
+  }
+  @media (max-width:680px){
+    .wrap{padding:0 20px}
+    nav.top .wrap{min-height:60px}
+    nav.top .nombre{font-size:11px}
+    nav.top .links{gap:2px}
+    nav.top .links a{font-size:9.5px;padding:7px 8px}
+    header.hero{padding:60px 0 50px}
+    .quien{gap:8px}
+    .hero h1{font-size:clamp(30px,9vw,42px);max-width:22ch}
+    .hero .identidad{font-size:10.5px;line-height:1.6}
+    .hero .byline{line-height:1.8}
+    .indice{grid-template-columns:1fr}
+    .indice a{min-height:0}
+    section{padding:68px 0}
+    .rol-txt,.patron{padding:24px 22px}
+    .matices{padding:24px 22px}
+    .pasos{grid-template-columns:1fr}
+    .map-stage,.map-stage svg{display:none}
+    .map-chips{display:block}
+    .chip-group{margin-bottom:18px}
+    .chip-group h4{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#89C4E4;margin-bottom:10px;font-weight:700}
+    .chip-row{display:flex;flex-wrap:wrap;gap:9px}
+    .chip-row .nodo{position:static;transform:none;max-width:none;font-size:12.5px}
+    .chip-row .nodo:hover{transform:scale(1.03)}
+    .tool{grid-template-columns:1fr;gap:5px}
+    .honesto{padding:28px 24px}
+  }
+  @media (max-width:480px){
+    body{font-size:16px}
+    nav.top .links a{padding:7px 6px;font-size:9px}
+    .hero .badge{font-size:10px;padding:9px 12px}
+    .hab{font-size:12.5px}
+    footer .wrap{flex-direction:column}
+  }
+
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Índice de la página">
+  <div class="wrap">
+    <span class="nombre">NAHIR GARAVITO · LÓPEZ S.A.</span>
+    <div class="links">
+      <a href="#rol">El rol</a>
+      <a href="#mapa">El mapa</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#logros">Logros</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="conf" style="width:14px;height:14px;background:var(--wine);top:70px;right:12%"></span>
+  <span class="conf" style="width:9px;height:9px;background:var(--emerald);top:150px;right:6%"></span>
+  <span class="conf" style="width:11px;height:11px;background:var(--sky);top:230px;right:16%"></span>
+  <span class="conf" style="width:7px;height:7px;background:var(--navy);top:60px;right:26%"></span>
+  <div class="wrap">
+    <p class="badge">✦ Mi experiencia más significativa</p>
+    <div class="quien">
+      <span class="q-nombre">Nahir Garavito</span>
+      <span class="q-sep">×</span>
+      <span class="q-emp">López S.A.</span>
+      <span class="q-fechas">SEP 2018 – SEP 2025</span>
+    </div>
+    <p class="identidad">Ingeniera Industrial · Analista de Procesos y Datos · Business Analyst</p>
+    <h1>En una operación intensa en datos, reglas y plazos, mi aporte fue volverla <em>más simple, más medible y más automática.</em></h1>
+    <p class="lede">Durante 7 años fui el punto de encuentro técnico de una operación de cobranza intensiva en datos: bases con decenas de miles de registros, clientes institucionales, tribunales, dinero con plazos y un regulador detrás. El rubro es de nicho; la mecánica no: procesos, reglas de negocio, datos y excepciones existen en cualquier industria. Esta página resume qué hice, cómo pienso y qué resultados dejó.</p>
+    <p class="byline">📍 Santiago de Chile 🇨🇱 · 🇻🇪 Venezolana · 🇪🇸 Española · Abierta a trabajo remoto (LATAM e internacional)</p>
+    <div class="indice">
+      <a href="#rol"><span class="n">01</span><b>El rol</b><span>La empresa, el camino recorrido y el lugar donde todo convergía</span></a>
+      <a href="#mapa"><span class="n">02</span><b>El mapa</b><span>Todas las partes del sistema y qué hacía yo con cada una</span></a>
+      <a href="#habilidades"><span class="n">03</span><b>Habilidades</b><span>Técnicas, de proceso y blandas: dónde las apliqué y dónde más sirven</span></a>
+      <a href="#logros"><span class="n">04</span><b>Logros</b><span>Tres ejemplos de mis aportes y resultados</span></a>
+      <a href="#contacto"><span class="n">05</span><b>Contacto</b><span>Con qué trabajo y cómo encontrarme</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 01 EL ROL ============ -->
+<section id="rol">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">01 · El rol</p>
+      <h2>Una empresa chica no es una empresa simple</h2>
+    </div>
+    <div class="rol-grid">
+      <div class="rol-txt">
+        <p class="ficha"><b>López S.A.</b> · Cobranza previsional para la AFC y las principales AFP · Santiago · Sep 2018 a Sep 2025</p>
+        <p>Un estudio de ~30 personas cobrando, por mandato legal, las cotizaciones previsionales que los empleadores dejaban impagas. Un nicho pequeño con una densidad enorme: cada dato tenía un dueño, un formato, un plazo y una consecuencia.</p>
+        <p>Lo mío fue un camino, no un cargo. Empecé en la parte administrativa de la operación, y la curiosidad por entender cada esquina del ecosistema me fue llevando al control de gestión: cada rincón entendido se transformaba en una propuesta, cada propuesta en un proceso sistematizado, y cada proceso sistematizado en algo que otra persona podía ejecutar. Así llegué al rol con el que terminé.</p>
+        <p>En una empresa grande, esta complejidad se reparte entre departamentos. Aquí convergía en un punto, y ese punto era yo. <strong>No porque hiciera todo, sino porque era quien entendía cómo se conectaba todo</strong>: qué efecto tenía una resolución judicial sobre la rendición al cliente, o un cambio de formato del cliente sobre el sistema interno.</p>
+        <p>Por eso mi patrón de trabajo fue este, y es lo más transferible que tengo:</p>
+      </div>
+      <aside class="matices">
+        <h3>La densidad del sistema</h3>
+        <ul>
+          <li><b>4 clientes institucionales</b>, cada uno con formato, canal, protocolo y plataforma propios</li>
+          <li><b>+200 tipos de evento procesal</b> en el ciclo de vida de cada juicio</li>
+          <li><b>Decenas de miles de causas</b> vigentes en cartera simultáneamente</li>
+          <li><b>3 tipos de plazo a la vez</b>: los comprometidos con cada cliente, los procesales y los financieros, con interés diario si el dinero se estanca</li>
+          <li><b>Un regulador</b> (Superintendencia de Pensiones) detrás de cada informe del cliente</li>
+        </ul>
+      </aside>
+    </div>
+    <div class="patron">
+      <h3>Analizar · Descifrar · Sistematizar · Controlar</h3>
+      <p>Mi valor estaba en convertir procesos que dependían del conocimiento de una persona en sistemas que funcionan sin ella. Yo me quedaba con la parte que no se puede sistematizar: el análisis, el diseño y las excepciones.</p>
+      <div class="pasos">
+        <div class="paso">
+          <span class="k">PASO 1</span>
+          <h4>Analizar</h4>
+          <p>Partir de los datos reales, no de supuestos: explorar las bases, cruzar fuentes y medir, para entender qué está pasando de verdad antes de proponer nada.</p>
+        </div>
+        <div class="paso">
+          <span class="k">PASO 2</span>
+          <h4>Descifrar</h4>
+          <p>Ingeniería inversa del proceso: estudiar las reglas del negocio, los requerimientos de cada cliente y los formatos exigidos hasta extraer la lógica exacta, con sus condiciones, cruces y casos borde.</p>
+        </div>
+        <div class="paso">
+          <span class="k">PASO 3</span>
+          <h4>Sistematizar</h4>
+          <p>Convertir esa lógica en herramientas: consultas listas, plantillas, manuales paso a paso. El proceso queda ejecutable por cualquier persona, sin conocimiento previo y sin riesgo de tocar lo delicado.</p>
+        </div>
+        <div class="paso">
+          <span class="k">PASO 4</span>
+          <h4>Controlar</h4>
+          <p>Indicadores de avance, controles de calidad y tratamiento diferenciado de excepciones. Los desvíos se detectan rápido y con datos, antes de que escalen.</p>
+        </div>
+      </div>
+      <p class="conecta"><b>Conectaba a:</b> gerencia general · contrapartes técnicas de los clientes · desarrollo de sistemas · procuradores y abogados · equipo administrativo · contabilidad y rendiciones · el regulador, a través de los informes.</p>
+      <p class="conecta">Ese ciclo incluyó coordinar y transferir trabajo, sí. Pero el corazón fue siempre el mismo: lógica, datos y diseño. Y esa mecánica viaja a cualquier contexto: si el proceso tiene reglas, plazos, datos y excepciones, sé cómo analizarlo, descifrarlo, sistematizarlo y controlarlo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 EL MAPA ============ -->
+<section id="mapa">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">02 · El mapa</p>
+      <h2>Un sistema completo, una persona en el punto de encuentro</h2>
+      <p>Cada actor hablaba su propio idioma: el jurídico, el técnico, el contable, el de cada cliente. Yo estaba en el medio para que la información cruzara entre todos sin perderse. Toca cada nodo para ver ese frente de trabajo y las habilidades que ponía en juego.</p>
+    </div>
+    <div class="map-legend">
+      <span class="leg-p"><i></i>Personas y roles</span>
+      <span class="leg-s"><i></i>Plataformas y sistemas</span>
+    </div>
+    <div class="map-flex">
+      <div>
+        <div class="map-stage" id="stage">
+          <svg id="svglines" aria-hidden="true"></svg>
+          <button class="nodo-centro" id="centro" aria-pressed="true">Yo<small>punto de encuentro</small></button>
+        </div>
+        <div class="map-chips" id="chips"></div>
+      </div>
+      <aside class="map-panel" id="panel" aria-live="polite">
+        <p class="tipo" id="p-tipo">El sistema</p>
+        <h3 id="p-titulo">Así se ve mi trabajo desde arriba</h3>
+        <div id="p-cuerpo">
+          <p>No fueron doce frentes sueltos: fue un sistema entendido de punta a punta. Entender cómo se conectaban las piezas permitía anticipar el efecto de cada cambio antes de que ocurriera.</p>
+          <p style="margin-top:12px"><b>Empieza por cualquier nodo.</b> Cada uno describe ese frente y sus habilidades.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 HABILIDADES ============ -->
+<section id="habilidades">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">03 · Habilidades</p>
+      <h2>Toca una habilidad: dónde la apliqué y dónde más sirve</h2>
+      <p>Tres grupos: técnicas, de proceso y blandas. Cada una con aplicaciones reales, y con el contexto amplio donde esa misma habilidad vuelve a ser útil.</p>
+    </div>
+    <div class="hab-flex">
+      <div id="hab-cols"></div>
+      <aside class="hab-panel" id="hab-panel" aria-live="polite">
+        <p class="tipo" id="hp-tipo">Habilidades</p>
+        <h3 id="hp-titulo">Elige una para empezar</h3>
+        <div id="hp-cuerpo"><p class="vacio">Cada habilidad muestra dónde la puse en juego y en qué otros contextos sirve. Todo lo que está aquí, lo hice.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 LOGROS ============ -->
+<section id="logros">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">04 · Logros</p>
+      <h2>Tres ejemplos de mis aportes y resultados</h2>
+      <p>Fueron muchos más. Estos tres son los que mejor se dejan contar en una tarjeta.</p>
+    </div>
+    <div class="prob-grid">
+      <article class="prob">
+        <span class="num">AUTOMATIZACIÓN</span>
+        <h3>Miles de expedientes, un botón</h3>
+        <p>El armado del expediente de incobrabilidad de cada juicio era manual, documento por documento. Detecté que podía sistematizarse por completo: traduje la lógica de negocio a especificaciones técnicas y fui el puente con el desarrollo que las implementó.</p>
+        <p class="res">De uno a uno, a <strong>miles de casos mensuales</strong>. Mis especificaciones viajaban muchas veces directamente en lógica de consultas SQL, en lugar de documentos de requerimientos tradicionales.</p>
+      </article>
+      <article class="prob">
+        <span class="num">OPTIMIZACIÓN</span>
+        <h3>Una cartera más liviana para todos</h3>
+        <p>La cartera llegó a bordear las 90.000 causas vigentes. Combinando la fusión de juicios de un mismo deudor, la reutilización de análisis ya hechos y la depuración formal de los casos incobrables, la redujimos de forma sostenida.</p>
+        <p class="res"><strong>Cientos de juicios optimizados cada mes</strong>, con ahorro documentado en gastos duplicados. Ganaba todo el mundo: la operación gastaba menos, el deudor pagaba menos costas, y el equipo liberaba tiempo para las causas realmente cobrables, que eran el objetivo.</p>
+      </article>
+      <article class="prob">
+        <span class="num">CIERRE</span>
+        <h3>Cerrar bien también es un logro</h3>
+        <p>En 2025, un cambio legal llevó la empresa a su cierre. Me correspondió el cierre técnico de los tres contratos: conciliar la cartera, documentar cada entrega y traspasarla en orden a los clientes. Me mantuvieron dos meses adicionales como consultora externa para asegurar la transición.</p>
+        <p class="res">Tres carteras entregadas conciliadas. Con uno de los clientes: <strong>más de 60.000 registros</strong> al <strong>99,3% de cuadratura</strong>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 CONTACTO ============ -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">05 · Herramientas y contacto</p>
+      <h2>Con qué trabajo</h2>
+    </div>
+    <div class="tools-grid">
+      <div>
+        <div class="tool"><b>Excel avanzado</b><span>tablas dinámicas, cruces masivos, validaciones y sistemas de control completos</span></div>
+        <div class="tool"><b>SQL</b><span>consultas complejas, vistas, cruces masivos y detección de inconsistencias sobre decenas de miles de registros</span></div>
+        <div class="tool"><b>Power BI</b><span>formación aplicada: modelado de datos, DAX y dashboards (Universidad de Chile, 2025)</span></div>
+        <div class="tool"><b>Python</b><span>fundamentos: lectura y comprensión de scripts</span></div>
+        <div class="tool"><b>IA generativa</b><span>uso cotidiano: investigación, documentación y estructuración de requerimientos, con validación de resultados</span></div>
+      </div>
+      <div class="honesto">
+        <p class="frase">Lo que sé hacer, lo demuestro con resultados. <em>Lo que no sé, lo investigo.</em></p>
+        <p class="busco">Busco posiciones individuales: Analista de Procesos y Datos, Business Analyst, Analista Funcional, Operations Analyst o Control de Gestión. Me interesa seguir creciendo desde un rol individual, cerca de los procesos, los datos y la resolución de problemas.</p>
+        <div class="cta">
+          <a class="btn btn-solid" href="mailto:nahir.garavito@gmail.com">Escríbeme</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/nahir-garavito" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="mail">✉️ <a href="mailto:nahir.garavito@gmail.com">nahir.garavito@gmail.com</a></p>
+        <small>📍 Santiago de Chile 🇨🇱 (Permanencia Definitiva)<br>Nacionalidades: 🇻🇪 Venezolana · 🇪🇸 Española<br>Abierta a trabajo remoto: LATAM e internacional</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>NAHIR GARAVITO SIERRALTA</span>
+    <span>HECHO CON CURIOSIDAD (Y CON IA) · 2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ============ MAPA ============ */
+  var nodos = [
+    {id:"gerencia", ring:1, label:"Gerencia General", tipo:"Personas y roles", titulo:"Gerencia General",
+     que:"Llegaba a la mesa con los datos ya estructurados: qué está pasando, por qué, y qué implica decidir en una dirección u otra. Convertía el detalle operativo en escenarios de decisión, anticipando el efecto de cada cambio sobre el resto del proceso.",
+     sk:["Análisis para decisiones","Indicadores (KPIs)","Detección de patrones","Comunicación ejecutiva"]},
+    {id:"clientes", ring:1, label:"Clientes AFC y AFP", tipo:"Personas y roles", titulo:"Clientes institucionales",
+     que:"Frente al cliente operaba como contraparte técnica: recibía el requerimiento, entendía la regla de negocio detrás, y devolvía la información en el formato y protocolo exacto que cada administradora exigía. Cuando dos fuentes no coincidían, reconstruía el proceso hasta explicar el origen de la diferencia.",
+     sk:["Conciliación de datos","Cuadraturas masivas","Requerimientos de cliente","Protocolos de comunicación"]},
+    {id:"desarrollo", ring:1, label:"Desarrollo de sistemas", tipo:"Personas y roles", titulo:"Desarrollo de sistemas",
+     que:"Con el equipo de desarrollo trabajaba como analista funcional: descomponía la necesidad operativa en reglas explícitas, condiciones y cruces de datos, muchas veces escribiendo la lógica directamente en lenguaje de consultas SQL, y validaba cada entrega contra casos reales antes de liberarla al equipo.",
+     sk:["Análisis funcional","Levantamiento de requerimientos","Lógica SQL","Validación funcional"]},
+    {id:"procuradores", ring:1, label:"Procuradores y abogados", tipo:"Personas y roles", titulo:"Procuradores y abogados",
+     que:"Entre lo jurídico y lo operativo hacía de traductora en ambas direcciones: convertía el procedimiento judicial en pasos operativos que cualquiera pudiera ejecutar sin ser abogado, y convertía las necesidades del proceso en solicitudes precisas para quienes litigaban.",
+     sk:["Traducción entre dominios","Documentación de procesos","Instructivos","Coordinación interfuncional"]},
+    {id:"equipo", ring:1, label:"Equipo administrativo", tipo:"Personas y roles", titulo:"Equipo administrativo",
+     que:"Cada proceso que se derivaba seguía el mismo estándar: documentarlo (instructivo escrito o video), asignarlo formalmente y controlar la calidad después. El conocimiento no quedaba en la cabeza de nadie: quedaba escrito, versionado y auditable.",
+     sk:["Estandarización","Transferencia de conocimiento","Control de calidad","Trazabilidad"]},
+    {id:"contabilidad", ring:1, label:"Contabilidad y rendiciones", tipo:"Personas y roles", titulo:"Contabilidad y rendiciones",
+     que:"Sobre el dinero mantenía control de secuencia y de plazo: cada monto consignado tenía que avanzar por etapas definidas y en tiempo, porque el costo del retraso era real y diario. El control cruzaba lo procesal con lo financiero en una sola vista.",
+     sk:["Control de gestión","Plazos financieros","Trazabilidad de fondos","Conciliación operativo-contable"]},
+    {id:"regulador", ring:1, label:"Regulador (vía clientes)", tipo:"Personas y roles", titulo:"El regulador, a través de los clientes",
+     que:"Cuando el dato viajaba hacia el regulador, la exigencia subía: cada diferencia entre registros debía tener origen identificado, secuencia reconstruida y respaldo documental capaz de sostener lo que el cliente reportaba a la Superintendencia de Pensiones.",
+     sk:["Análisis de causa raíz","Integridad de datos","Respaldo documental","Rigor en el detalle"]},
+    {id:"gestion", ring:2, label:"Sistema de gestión interno", tipo:"Plataformas y sistemas", titulo:"El sistema de gestión interno",
+     que:"Al sistema propio de la empresa no solo lo operaba: lo extendía. Detectaba qué documentos y flujos faltaban, especificaba la plantilla o el módulo nuevo, y dejaba la funcionalidad disponible para que todo el equipo la usara sin depender de nadie.",
+     sk:["Mejora de sistemas desde el uso","Especificación funcional","Automatización documental"]},
+    {id:"sql", ring:2, label:"SQL Server", tipo:"Plataformas y sistemas", titulo:"SQL Server",
+     que:"Sobre la base de datos el trabajo era de consultas y vistas cruzando decenas de miles de registros: detectar inconsistencias, priorizar cartera, alimentar el sistema de control y producir salidas ya listas en el formato del destinatario, sin retrabajo posterior.",
+     sk:["Consultas y vistas","Cruces masivos","Detección de inconsistencias","Salidas por formato"]},
+    {id:"previred", ring:2, label:"PreviRed · Justicia digital", tipo:"Plataformas y sistemas", titulo:"PreviRed y la justicia digital",
+     que:"Mi trabajo era lograr que nuestros sistemas y la plataforma judicial se entendieran: preparaba los datos internos en el formato exacto que la plataforma necesita para procesar solicitudes masivas, y cuando algo era rechazado, ese caso entraba a un ciclo de revisión: entender el motivo, corregir y volver a cargar hasta dejarlo procesado.",
+     sk:["Integración entre sistemas","Transformación de formatos","Gestión de rechazos","Ciclos de control"]},
+    {id:"platcli", ring:2, label:"Plataformas de cada cliente", tipo:"Plataformas y sistemas", titulo:"Las plataformas de cada cliente",
+     que:"Cada cliente traía su propio formato, canal y nomenclatura. El trabajo era de normalización: convertir cuatro estándares externos distintos en un estándar interno único que el equipo pudiera interpretar y accionar sin ambigüedad.",
+     sk:["Normalización de datos","Homologación","Estándares internos","Gestión multicliente"]},
+    {id:"masivo", ring:2, label:"Contacto masivo a deudores", tipo:"Plataformas y sistemas", titulo:"La plataforma de contacto masivo",
+     que:"Las campañas de contacto funcionaban como un proceso parametrizado: consultas que segmentaban a quién contactar, plantillas con variables, calendario por cliente y medición de resultados para ajustar la priorización de cada ciclo.",
+     sk:["Segmentación con SQL","Parametrización","Medición y ajuste","Calendarios operativos"]}
+  ];
+
+  var stage = document.getElementById('stage');
+  var svg = document.getElementById('svglines');
+  var chips = document.getElementById('chips');
+  var centro = document.getElementById('centro');
+  var pTipo = document.getElementById('p-tipo');
+  var pTit = document.getElementById('p-titulo');
+  var pCuerpo = document.getElementById('p-cuerpo');
+  var inicial = {tipo:pTipo.textContent, tit:pTit.textContent, html:pCuerpo.innerHTML};
+  var botonesMapa = {};
+
+  nodos.forEach(function(n){
+    var b = document.createElement('button');
+    b.className = 'nodo ' + (n.ring===1 ? 'persona' : 'plataforma');
+    b.textContent = n.label;
+    b.setAttribute('aria-pressed','false');
+    b.addEventListener('click', function(){ selMapa(n.id); });
+    stage.appendChild(b);
+    botonesMapa[n.id] = [b];
+  });
+
+  [['Personas y roles',1],['Plataformas y sistemas',2]].forEach(function(g){
+    var grp = document.createElement('div'); grp.className='chip-group';
+    var h = document.createElement('h4'); h.textContent = g[0]; grp.appendChild(h);
+    var row = document.createElement('div'); row.className='chip-row';
+    nodos.filter(function(n){return n.ring===g[1];}).forEach(function(n){
+      var b = document.createElement('button');
+      b.className = 'nodo ' + (n.ring===1 ? 'persona' : 'plataforma');
+      b.textContent = n.label;
+      b.setAttribute('aria-pressed','false');
+      b.addEventListener('click', function(){ selMapa(n.id); });
+      row.appendChild(b);
+      botonesMapa[n.id].push(b);
+    });
+    grp.appendChild(row); chips.appendChild(grp);
+  });
+
+  function layout(){
+    var w = stage.clientWidth;
+    if(!w) return;
+    var cx = w/2, cy = w/2;
+    var r1 = w*0.30, r2 = w*0.455;
+    svg.setAttribute('viewBox','0 0 '+w+' '+w);
+    svg.innerHTML = '';
+    var inner = nodos.filter(function(n){return n.ring===1;});
+    var outer = nodos.filter(function(n){return n.ring===2;});
+    function place(lista, r, offset){
+      lista.forEach(function(n, i){
+        var ang = offset + (i/lista.length)*Math.PI*2;
+        var x = cx + r*Math.cos(ang), y = cy + r*Math.sin(ang);
+        var b = botonesMapa[n.id][0];
+        b.style.left = (x/w*100)+'%';
+        b.style.top = (y/w*100)+'%';
+        var ln = document.createElementNS('http://www.w3.org/2000/svg','line');
+        ln.setAttribute('x1',cx); ln.setAttribute('y1',cy);
+        ln.setAttribute('x2',x); ln.setAttribute('y2',y);
+        ln.dataset.id = n.id;
+        svg.appendChild(ln);
+      });
+    }
+    place(inner, r1, -Math.PI/2);
+    place(outer, r2, -Math.PI/2 + Math.PI/outer.length);
+    marcar(activo);
+  }
+
+  var activo = null;
+  function marcar(id){
+    Array.prototype.forEach.call(svg.querySelectorAll('line'), function(l){
+      l.classList.toggle('on', l.dataset.id === id);
+    });
+  }
+  function selMapa(id){
+    activo = id;
+    Object.keys(botonesMapa).forEach(function(k){
+      botonesMapa[k].forEach(function(b){
+        var on = (k===id);
+        b.classList.toggle('activo', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    });
+    centro.setAttribute('aria-pressed','false');
+    marcar(id);
+    var n = nodos.filter(function(x){return x.id===id;})[0];
+    pTipo.textContent = n.tipo;
+    pTit.textContent = n.titulo;
+    var sks = n.sk.map(function(s){return '<span>'+s+'</span>';}).join('');
+    pCuerpo.innerHTML = '<p>'+n.que+'</p><div class="mp-skills">'+sks+'</div>';
+    if(window.innerWidth < 940){
+      document.getElementById('panel').scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+  }
+  centro.addEventListener('click', function(){
+    activo = null;
+    Object.keys(botonesMapa).forEach(function(k){
+      botonesMapa[k].forEach(function(b){ b.classList.remove('activo'); b.setAttribute('aria-pressed','false'); });
+    });
+    centro.setAttribute('aria-pressed','true');
+    marcar(null);
+    pTipo.textContent = inicial.tipo;
+    pTit.textContent = inicial.tit;
+    pCuerpo.innerHTML = inicial.html;
+  });
+  window.addEventListener('resize', layout);
+  layout();
+
+  /* ============ HABILIDADES ============ */
+  var grupos = [
+    {clave:"g-tec", nombre:"Técnicas", tipo:"Habilidad técnica", habs:[
+      {id:"hsql", n:"SQL: consultas, vistas y cruces",
+       ap:["Priorización y control de una cartera de decenas de miles de causas, alimentada por consultas al sistema interno.",
+           "Salidas generadas directamente en el formato exacto que exigía cada cliente, sin retrabajo posterior.",
+           "Segmentación de campañas de contacto masivo, parametrizable por cliente y estado."],
+       tr:"Reportería, conciliaciones, auditoría de datos y análisis operacional en cualquier industria con volumen: banca, seguros, logística, retail, SaaS."},
+      {id:"hexcel", n:"Excel avanzado",
+       ap:["Un sistema de control de cartera con más de 20 vistas interconectadas: prioridades, responsables, excepciones y reglas documentadas dentro del propio libro.",
+           "Cuadraturas masivas sobre bases de decenas de miles de registros.",
+           "Herramientas de trabajo para el equipo: plantillas de verificación, controles de carga, seguimiento de avance."],
+       tr:"Modelos de control, presupuestos, tableros operativos y limpieza de datos en cualquier back office o área de operaciones."},
+      {id:"hfun", n:"Análisis funcional",
+       ap:["Automatización de expedientes de incobrabilidad: especifiqué la lógica y fui el puente con el desarrollo que la implementó. Escala final: miles de casos mensuales.",
+           "Módulo de generación masiva de escritos: de una carga de archivo a documentos personalizados, disponible para todo el equipo.",
+           "Integración de datos con la plataforma del sistema judicial: los datos internos se preparaban en el formato exacto que la plataforma exige para procesar solicitudes masivas, y cada rechazo entraba a un ciclo de corrección y recarga hasta quedar procesado."],
+       tr:"Implementación de sistemas, ERP y CRM, automatizaciones y mejoras de plataforma: el rol que traduce lo que el negocio necesita en lo que el desarrollo construye."},
+      {id:"hreglas", n:"Modelamiento de reglas de negocio",
+       ap:["Las reglas de cálculo de honorarios de los cuatro clientes, cada una con tramos y repartos distintos, aprendidas del negocio con la asesoría de gerencia y traducidas a lógica calculable.",
+           "Criterios de elegibilidad documentados y auditables: qué causa entra a análisis, cuáles se pueden fusionar, qué excepciones bloquean."],
+       tr:"Pricing, comisiones, facturación, políticas de crédito: cualquier lugar donde una regla comercial deba convertirse en cálculo."},
+      {id:"hconc", n:"Conciliación y calidad de datos",
+       ap:["Conciliación de una cartera de más de 60.000 registros con un cliente institucional: 99,3% de cuadratura.",
+           "Cuadraturas en dos dimensiones a la vez: el estado procesal de cada juicio, y por separado los saldos vigentes y pendientes de cada deuda, compuesta a su vez por planillas y períodos. Cada asignación cuadrada en todo sentido.",
+           "Informes que explicaban el origen exacto de cada diferencia entre registros, usados por los clientes ante el regulador."],
+       tr:"Conciliación bancaria y contable, control de inventarios, migraciones de datos y reportería regulatoria."},
+      {id:"hpbi", n:"Power BI: modelado y dashboards",
+       ap:["Modelado de datos, DAX y construcción de dashboards, con formación de la Universidad de Chile (2025).",
+           "El complemento natural de mi análisis: llevar lo que descubro en Excel y SQL a visualizaciones que cuentan la historia del dato."],
+       tr:"Tableros de indicadores para equipos de operaciones, finanzas o comercial."}
+    ]},
+    {clave:"g-pro", nombre:"De proceso", tipo:"Habilidad de proceso", habs:[
+      {id:"hdis", n:"Diseño y estandarización de procesos",
+       ap:["Procesos complejos del rubro convertidos en manuales paso a paso con las consultas ya construidas, ejecutables sin conocimiento previo.",
+           "Instructivos que traducen procedimientos judiciales a lenguaje para no abogados: el equipo dejó de depender de un abogado para interpretar un expediente.",
+           "Protocolos por cliente sistematizados: quién genera cada documento, quién firma, en qué formato exacto."],
+       tr:"SOPs, onboarding, certificaciones de calidad y escalamiento de operaciones en cualquier rubro."},
+      {id:"hdoc", n:"Documentación y transferencia de procesos",
+       ap:["Cada proceso que sistematicé y transferí siguió el mismo diseño: instructivo escrito o video, entrega formal y acuse de recibo. Diseñados para no depender de una sola persona.",
+           "Controles de calidad periódicos sobre lo transferido: los desvíos se detectaban rápido, precisamente para que no escalaran.",
+           "Tareas informales convertidas en procedimientos formales, versionados y auditables."],
+       tr:"Continuidad operativa y gestión del conocimiento: que ninguna operación se detenga porque alguien se fue de vacaciones o de la empresa."},
+      {id:"hpla", n:"Control de gestión y plazos",
+       ap:["Tres tipos de plazo controlados a la vez: el comprometido con cada cliente, el procesal de los tribunales y el financiero del dinero consignado, con costo diario por retraso.",
+           "Indicadores de avance por antigüedad de gestión: verificar si la cartera se movía de verdad o solo generaba actividad."],
+       tr:"SLAs, vencimientos, compliance, cobranza y cualquier flujo donde el atraso tenga costo."},
+      {id:"hexc", n:"Gestión de excepciones",
+       ap:["Ciclos de control de rechazos con las plataformas judiciales: revisar, clasificar, corregir, recargar.",
+           "Detección de casos que no calzaban con la regla general y diseño del tratamiento diferenciado para cada tipo."],
+       tr:"Postventa, reclamos, rechazos de integraciones y los casos borde de cualquier proceso masivo."},
+      {id:"hnor", n:"Normalización multicliente",
+       ap:["Cuatro clientes con formatos, canales y nomenclaturas distintas, unificados en un estándar interno único accionable por el equipo.",
+           "Tablas de homologación entre códigos internos y los de cada plataforma externa."],
+       tr:"Integración de proveedores, clientes o sucursales con estándares distintos; migraciones y consolidación de datos."}
+    ]},
+    {clave:"g-sua", nombre:"Blandas", tipo:"Habilidad blanda", habs:[
+      {id:"htra", n:"Traducción negocio–tecnología",
+       ap:["Del jurídico al operativo: procedimientos judiciales explicados para que cualquiera los ejecutara.",
+           "Del negocio al técnico: necesidades operativas convertidas en requerimientos que un desarrollador puede programar.",
+           "Del dato al cliente: diferencias entre registros explicadas en el lenguaje de quien las reporta al regulador."],
+       tr:"Cualquier proyecto donde negocio y desarrollo necesiten entenderse: implementaciones, automatizaciones, mejoras de sistemas."},
+      {id:"heje", n:"Comunicación de análisis",
+       ap:["Convertir datos operativos en escenarios de decisión: qué está pasando, por qué, y qué efecto tiene cada alternativa río abajo.",
+           "Presentado a todo nivel: mesas de trabajo con gerencia general, contrapartes técnicas de clientes y equipos internos.",
+           "Propuestas de mejora sustentadas en datos que se convirtieron en decisiones aprobadas y aplicadas."],
+       tr:"Presentar análisis a jefaturas, clientes o equipos en cualquier industria: convertir datos en decisiones."},
+      {id:"hant", n:"Anticipación",
+       ap:["Reconocida por los clientes por responder no solo lo solicitado, sino lo que iban a necesitar después, incluso cuando ellos no lo habían identificado.",
+           "Evaluación de impacto antes de cada cambio: qué se rompe río abajo si movemos esta pieza."],
+       tr:"Gestión de clientes internos y externos, diseño de procesos y prevención de errores costosos."},
+      {id:"hcur", n:"Curiosidad y aprendizaje continuo",
+       ap:["SQL, Power BI y Python estudiados por iniciativa propia en universidades chilenas.",
+           "IA generativa incorporada al trabajo diario: investigación, documentación y estructuración de información, siempre con validación propia. Esta misma página nació de ese aprendizaje.",
+           "Mi frase de trabajo: lo que no sé, lo investigo."],
+       tr:"Adaptación rápida a nuevos rubros, sistemas y herramientas: el músculo que hace transferible todo lo demás."}
+    ]}
+  ];
+
+  var cols = document.getElementById('hab-cols');
+  var hpTipo = document.getElementById('hp-tipo');
+  var hpTit = document.getElementById('hp-titulo');
+  var hpCuerpo = document.getElementById('hp-cuerpo');
+  var botonesHab = {};
+
+  grupos.forEach(function(g){
+    var div = document.createElement('div');
+    div.className = 'hab-grupo ' + g.clave;
+    var h = document.createElement('h3'); h.textContent = g.nombre; div.appendChild(h);
+    var row = document.createElement('div'); row.className = 'hab-row';
+    g.habs.forEach(function(hb){
+      var b = document.createElement('button');
+      b.className = 'hab'; b.textContent = hb.n;
+      b.setAttribute('aria-pressed','false');
+      b.addEventListener('click', function(){ selHab(hb, g, b); });
+      row.appendChild(b);
+      botonesHab[hb.id] = b;
+    });
+    div.appendChild(row);
+    cols.appendChild(div);
+  });
+
+  function selHab(hb, g, btn){
+    Object.keys(botonesHab).forEach(function(k){
+      botonesHab[k].classList.remove('activo');
+      botonesHab[k].setAttribute('aria-pressed','false');
+    });
+    btn.classList.add('activo');
+    btn.setAttribute('aria-pressed','true');
+    hpTipo.textContent = g.tipo;
+    hpTit.textContent = hb.n;
+    var lis = hb.ap.map(function(a){return '<li>'+a+'</li>';}).join('');
+    hpCuerpo.innerHTML = '<p class="aplique">Dónde la apliqué</p><ul>'+lis+'</ul>'
+      + '<p class="amplio">Dónde más sirve</p><p class="transfer">'+hb.tr+'</p>';
+    if(window.innerWidth < 940){
+      document.getElementById('hab-panel').scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+  }
+})();
+</script>
+</body>
+</html>
